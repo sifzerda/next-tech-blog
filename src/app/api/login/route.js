@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import prisma from '../../../../lib/prisma';
+import { prisma } from '../../../../lib/prisma';
 import { signJWT } from '../../../../lib/auth';
 
 function jsonResponse(body, status = 200) {
