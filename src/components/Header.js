@@ -25,7 +25,7 @@ export default function Header() {
     }
 
     return (
-        <header className="bg-[#06064d] px-4 sm:px-6 pt-6 pb-8">
+        <header className="bg-[#06064d] px-4 sm:px-6 pt-6 pb-8 border-b-[4px] border-[#0b82c4]">
 
             <nav className="flex flex-wrap gap-4 sm:gap-8 text-[#c8efbb] text-lg font-medium mb-6">
 

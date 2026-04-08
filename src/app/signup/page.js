@@ -45,69 +45,67 @@ export default function Signup() {
     }
 
     return (
-        <main className="min-h-screen bg-[#c8efbb] border-[4px] border-[#0b82c4] flex items-center justify-center px-4 py-10">
-            <div className="w-full max-w-2xl border-[5px] border-[#06064d] bg-[#c8efbb]">
-                <div className="bg-[#06064d] text-[#c8efbb] px-6 py-5">
-                    <h1 className="text-3xl sm:text-5xl font-bold">Sign Up</h1>
+        <main className="bg-[#c8efbb] flex items-center justify-center px-2 py-7">
+            <div className="w-full max-w-md border-[4px] border-[#06064d] bg-[#c8efbb] rounded-md shadow-lg">
+                <div className="bg-[#06064d] text-[#c8efbb] px-4 py-3">
+                    <h1 className="text-2xl sm:text-3xl font-bold">Sign Up</h1>
                     <p className="mt-2 text-sm sm:text-base">
                         Create your Tech Blog account
                     </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="p-6 sm:p-8 space-y-6">
+                <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-5">
                     <div>
-                        <label className="block text-[#06064d] text-sm font-bold mb-2">
+                        <label className="block text-[#06064d] text-sm font-bold mb-1">
                             Username
                         </label>
-
                         <input
                             type="text"
                             placeholder="Choose a username"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
                             required
-                            className="w-full border-[4px] border-[#06064d] bg-white px-4 py-3 text-lg outline-none"
+                            className="w-full border-[3px] border-[#06064d] bg-white px-3 py-2 text-base text-black outline-none rounded"
                         />
                     </div>
 
                     <div>
-                        <label className="block text-[#06064d] text-sm font-bold mb-2">
+                        <label className="block text-[#06064d] text-sm font-bold mb-1">
                             Email
                         </label>
-
                         <input
                             type="email"
                             placeholder="Enter your email"
                             value={email}
                             onChange={e => setEmail(e.target.value)}
                             required
-                            className="w-full border-[4px] border-[#06064d] bg-white px-4 py-3 text-lg outline-none"
+                            className="w-full border-[3px] border-[#06064d] bg-white px-3 py-2 text-base text-black outline-none rounded"
                         />
                     </div>
 
                     <div>
-                        <label className="block text-[#06064d] text-sm font-bold mb-2">
+                        <label className="block text-[#06064d] text-sm font-bold mb-1">
                             Password
                         </label>
-
                         <input
                             type="password"
                             placeholder="Enter your password"
                             value={password}
                             onChange={e => setPassword(e.target.value)}
                             required
-                            className="w-full border-[4px] border-[#06064d] bg-white px-4 py-3 text-lg outline-none"
+                            className="w-full border-[3px] border-[#06064d] bg-white px-3 py-2 text-base text-black outline-none rounded"
                         />
                     </div>
 
                     <button
                         type="submit"
-                        className="w-full bg-[#06064d] text-[#c8efbb] text-lg font-bold py-4 border-[4px] border-[#06064d] hover:bg-[#0b82c4] transition-colors disabled:opacity-50">
+                        className="w-full bg-[#06064d] text-[#c8efbb] text-lg font-bold py-2 border-[4px] border-[#06064d] hover:bg-[#0b82c4] transition-colors disabled:opacity-50">
                         Sign Up
                     </button>
-                    {message && <p className="mt-4 text-red-500">{message}</p>}
 
-                    <p className="text-center text-[#06064d] text-base">
+                    {message && <p className="mt-3 text-red-500 text-center">{message}</p>}
+
+                    <p className="text-center text-[#06064d] text-sm">
                         Already have an account?{" "}
                         <Link
                             href="/login"

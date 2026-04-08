@@ -76,7 +76,7 @@ export default function HomePage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#c8efbb] border-[4px] border-[#0b82c4] flex flex-col">
+    <main className="min-h-screen bg-[#c8efbb] flex flex-col">
 
       <section className="flex-1 flex justify-center py-12 px-4">
         <div className="w-full max-w-4xl space-y-6">
