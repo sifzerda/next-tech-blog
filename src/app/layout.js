@@ -25,6 +25,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-[#c8efbb]">
+        
         <AuthProvider>
           <main className="min-h-screen bg-[#c8efbb] flex flex-col">
             <Header />
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
             <Footer />
           </main>
         </AuthProvider>
+        
       </body>
     </html>
   );

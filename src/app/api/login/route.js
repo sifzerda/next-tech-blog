@@ -27,9 +27,19 @@ export async function POST(req) {
     }
 
     // Use your jose-based signJWT helper here
-    const token = await signJWT({ sub: user.id, username: user.username, email: user.email}, { expiresIn: '1h' });
+    const token = await signJWT({ sub: user.id, username: user.username, email: user.email }, { expiresIn: '1h' });
 
-    return jsonResponse({ token }, 200);
+    return jsonResponse(
+      {
+        token,
+        user: {
+          id: user.id,
+          username: user.username,
+          email: user.email,
+        },
+      },
+      200
+    );
   } catch (error) {
     console.error('Login error:', error);
     return jsonResponse({ error: 'Internal server error' }, 500);
