@@ -1,8 +1,5 @@
 "use client";
 
-import { FaGithub } from "react-icons/fa";
-import Image from "next/image";
-
 export default function HomePage() {
 
   const posts = [
@@ -80,17 +77,6 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-[#c8efbb] border-[4px] border-[#0b82c4] flex flex-col">
-      <header className="bg-[#06064d] px-4 sm:px-6 pt-6 pb-8">
-        <nav className="flex flex-wrap gap-4 sm:gap-8 text-[#c8efbb] text-lg font-medium mb-6">
-          <a href="#" className="hover:underline">Home</a>
-          <a href="#" className="hover:underline">Profile</a>
-          <a href="#" className="hover:underline">Login</a>
-        </nav>
-
-        <div className="inline-block bg-[#c8efbb] text-[#06064d] px-4 sm:px-5 py-3 rounded-2xl shadow-[6px_6px_0px_#7b7b7b]">
-          <h1 className="text-4xl sm:text-5xl font-extrabold">The Tech Blog</h1>
-        </div>
-      </header>
 
       <section className="flex-1 flex justify-center py-12 px-4">
         <div className="w-full max-w-4xl space-y-6">
@@ -115,27 +101,6 @@ export default function HomePage() {
 
       {/* Footer */}
 
-      <footer className="bg-[#06064d] text-[#c8efbb] py-4 px-4 sm:px-6">
-        <div className="flex flex-col items-center max-w-4xl mx-auto space-y-1">
-
-          <div className="w-full border-t border-[#c8efbb]/40 mb-4"></div>
-
-          <div className="text-sm sm:text-base font-medium tracking-wide">
-            tech-blog
-          </div>
-
-          <div className="text-sm sm:text-base font-medium tracking-wide">
-            siferzda 2026
-          </div>
-
-          <div>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-              <FaGithub className="w-5 h-5 sm:w-6 sm:h-6" />
-            </a>
-          </div>
-
-        </div>
-      </footer>
     </main>
   );
 }
